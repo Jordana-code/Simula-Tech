@@ -128,21 +128,9 @@ Exporta o array global `bancoPerguntas` com mais de **120 perguntas** divididas 
 
 Não é necessário nenhum servidor ou instalação. Basta:
 
-1. Fazer o download ou clone do repositório
-2. Abrir o arquivo `index.html` em qualquer navegador moderno (Chrome, Firefox, Edge, Safari)
+1. Acessar o link a seguir em seu navegador:
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/simulatech.git
-
-# Acesse a pasta
-cd simulatech
-
-# Abra no navegador
-open index.html
-# ou simplesmente clique duas vezes no arquivo index.html
-```
-
+[https://jordana-code.github.io/Simula-Tech/#hero](https://jordana-code.github.io/Simula-Tech/#hero)
 
 ---
 
