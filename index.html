@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simula Tech | Prepare-se para Entrevistas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="cerebro.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR FIXA -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <span class="logo-dot"></span>
+                Simula<span>Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#carreiras" class="nav-link">Carreiras</a></li>
+                <li><a href="#simulado" class="nav-link">Simulado</a></li>
+            </ul>
+            <button class="nav-cta" onclick="document.getElementById('simulado').scrollIntoView({behavior:'smooth'})">
+                Começar agora
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" onclick="closeMobileMenu()">Início</a>
+            <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
+            <a href="#carreiras" onclick="closeMobileMenu()">Carreiras</a>
+            <a href="#simulado" onclick="closeMobileMenu()">Simulado</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Plataforma de Entrevistas Técnicas
+            </div>
+            <h1>Ace sua próxima<br><span class="gradient-text">entrevista tech</span></h1>
+            <p class="hero-sub">Simule entrevistas reais com perguntas de Front-end e Back-end, cronômetro integrado e feedback instantâneo. Do júnior ao pleno.</p>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="document.getElementById('simulado').scrollIntoView({behavior:'smooth'})">
+                    Iniciar Simulado
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button class="btn-secondary" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">
+                    Saiba mais
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">120+</span>
+                    <span class="stat-label">Perguntas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">4</span>
+                    <span class="stat-label">Trilhas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">2min</span>
+                    <span class="stat-label">Por questão</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-card-float">
+            <div class="float-card fc1">
+                <div class="fc-header">
+                    <span class="fc-tag frontend">Front-end · Pleno</span>
+                    <span class="fc-timer">01:43</span>
+                </div>
+                <p class="fc-question">O que é o Virtual DOM e como ele otimiza as renderizações no React?</p>
+                <div class="fc-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="float-card fc2">
+                <div class="fc-score">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"/>
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="#05ffa1" stroke-width="6" stroke-dasharray="176" stroke-dashoffset="44" stroke-linecap="round" transform="rotate(-90 32 32)"/>
+                        </svg>
+                        <span>80%</span>
+                    </div>
+                    <div>
+                        <p class="score-label">Última sessão</p>
+                        <p class="score-val">4 de 5 acertos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-card fc3">
+                <span class="fc3-icon">⚡</span>
+                <p>Modo cronometrado para simular pressão real</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="section-label">Sobre a plataforma</div>
+        <h2 class="section-title">Tudo que você precisa para<br>passar na entrevista</h2>
+        <p class="section-sub">Desenvolvida por devs, para devs. Questões reais usadas em processos seletivos das maiores empresas de tecnologia do Brasil.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(185,103,255,0.12); color: #b967ff;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Cronômetro Real</h3>
+                <p>2 minutos por pergunta, simulando a pressão de uma entrevista ao vivo. Aprenda a pensar rápido e com clareza.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(1,205,254,0.12); color: #01cdfe;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <h3>Auto-avaliação</h3>
+                <p>Revele a resposta no seu tempo, reflita e registre se acertou ou não. Honestidade é a chave para evoluir.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(5,255,161,0.12); color: #05ffa1;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h3>Histórico de Sessões</h3>
+                <p>Acompanhe sua evolução com o histórico salvo localmente. Veja sua porcentagem de acertos ao longo do tempo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(255,113,206,0.12); color: #ff71ce;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </div>
+                <h3>Múltiplas Trilhas</h3>
+                <p>Front-end e Back-end nos níveis Júnior e Pleno. Perguntas cuidadosamente selecionadas para cada estágio.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(185,103,255,0.12); color: #b967ff;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Comunidade Dev</h3>
+                <p>Construído para a comunidade brasileira de tecnologia. Em português, com exemplos e contexto do mercado local.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(5,255,161,0.12); color: #05ffa1;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>100% Gratuito</h3>
+                <p>Sem cadastro, sem pagamento, sem limite de usos. Seus dados ficam apenas no seu navegador, sempre privados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARREIRAS -->
+    <section id="carreiras">
+        <div class="section-label">Guia de Carreiras</div>
+        <h2 class="section-title">Escolha sua trilha<br>e domine o mercado</h2>
+        <p class="section-sub">Entenda as diferenças, salários e o que esperar de cada especialização na área de tecnologia.</p>
+
+        <div class="career-grid">
+            <div class="career-card">
+                <div class="career-header">
+                    <div class="career-icon frontend-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div>
+                        <span class="career-tag frontend-tag">Front-end</span>
+                        <h3>Desenvolvedor Front-end</h3>
+                    </div>
+                </div>
+                <p class="career-desc">Responsável por tudo que o usuário vê e interage. Transforma designs em interfaces funcionais, acessíveis e de alta performance.</p>
+                <div class="career-details">
+                    <div class="career-detail">
+                        <span class="detail-label">💰 Faixa salarial</span>
+                        <span class="detail-val frontend-val">R$ 3.000 – R$ 16.000</span>
+                    </div>
+                    <div class="career-detail">
+                        <span class="detail-label">⚡ Vantagens</span>
+                        <span class="detail-text">Feedback visual imediato, resultado do trabalho é tangível, alta demanda no mercado</span>
+                    </div>
+                    <div class="career-detail">
+                        <span class="detail-label">🎯 Desafios</span>
+                        <span class="detail-text">Evolução constante das tecnologias, suporte a múltiplos browsers e dispositivos</span>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-pill">HTML/CSS</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">Next.js</span>
+                </div>
+                <button class="career-btn" onclick="selectCareer('frontend')">Praticar Front-end →</button>
+            </div>
+
+            <div class="career-card">
+                <div class="career-header">
+                    <div class="career-icon backend-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    </div>
+                    <div>
+                        <span class="career-tag backend-tag">Back-end</span>
+                        <h3>Desenvolvedor Back-end</h3>
+                    </div>
+                </div>
+                <p class="career-desc">Cuida da lógica de negócio, bancos de dados, APIs e servidores. É o motor que faz tudo funcionar por trás das interfaces.</p>
+                <div class="career-details">
+                    <div class="career-detail">
+                        <span class="detail-label">💰 Faixa salarial</span>
+                        <span class="detail-val backend-val">R$ 3.000 – R$ 16.000</span>
+                    </div>
+                    <div class="career-detail">
+                        <span class="detail-label">⚡ Vantagens</span>
+                        <span class="detail-text">Trabalho com arquitetura robusta, segurança e dados, alta valorização no mercado enterprise</span>
+                    </div>
+                    <div class="career-detail">
+                        <span class="detail-label">🎯 Desafios</span>
+                        <span class="detail-text">Alta complexidade técnica, necessidade de pensar em escala e performance desde o início</span>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">SQL</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">AWS</span>
+                </div>
+                <button class="career-btn career-btn-backend" onclick="selectCareer('backend')">Praticar Back-end →</button>
+            </div>
+        </div>
+
+        <div class="career-extra">
+            <div class="extra-card">
+                <span class="extra-icon">📈</span>
+                <div>
+                    <strong>Mercado em alta</strong>
+                    <p>O Brasil tem +600 mil vagas em tecnologia abertas por ano, com crescimento de 15% ao ano.</p>
+                </div>
+            </div>
+            <div class="extra-card">
+                <span class="extra-icon">🌍</span>
+                <div>
+                    <strong>Trabalho remoto</strong>
+                    <p>Mais de 70% das vagas de dev permitem trabalho remoto, incluindo oportunidades internacionais.</p>
+                </div>
+            </div>
+            <div class="extra-card">
+                <span class="extra-icon">🎓</span>
+                <div>
+                    <strong>Sem barreiras</strong>
+                    <p>Não é necessário diploma. Portfólio e habilidades técnicas comprovadas valem mais no mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADO -->
+    <section id="simulado">
+        <div class="section-label">Simulado</div>
+        <h2 class="section-title">Pronto para o desafio?</h2>
+        <p class="section-sub">Configure seu simulado e comece agora. 5 perguntas, 2 minutos cada. Boa sorte!</p>
+
+        <div class="sim-wrapper">
+            <!-- CONFIGURAÇÃO -->
+            <div id="sim-setup" class="sim-panel">
+                <div class="sim-config">
+                    <div class="config-group">
+                        <label>Trilha</label>
+                        <div class="select-wrapper">
+                            <select id="select-trilha">
+                                <option value="frontend">🖥️ Front-end</option>
+                                <option value="backend">⚙️ Back-end</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="config-group">
+                        <label>Nível</label>
+                        <div class="select-wrapper">
+                            <select id="select-nivel">
+                                <option value="junior">🟢 Júnior</option>
+                                <option value="pleno">🔵 Pleno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="config-group config-group-full">
+                        <label>Progresso da sessão</label>
+                        <div class="sim-progress-bar">
+                            <div class="sim-progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                        <div class="sim-progress-labels">
+                            <span id="progressLabel">0 de 5 questões</span>
+                            <span id="scoreLabel">Score: 0%</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-start" onclick="iniciarSimulado()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Iniciar Simulado
+                </button>
+            </div>
+
+            <!-- ARENA -->
+            <div id="arena" class="sim-panel hidden">
+                <div class="arena-header">
+                    <div class="arena-meta">
+                        <span id="arena-trilha-label" class="arena-tag">Front-end</span>
+                        <span id="arena-nivel-label" class="arena-level">Júnior</span>
+                        <span id="arena-questao">Questão 1/5</span>
+                    </div>
+                    <div id="timer" class="arena-timer">02:00</div>
+                </div>
+
+                <div class="arena-progress">
+                    <div id="arenaProgressFill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--rosa), var(--roxo)); border-radius: 4px; transition: width 0.4s ease;"></div>
+                </div>
+
+                <div id="pergunta" class="arena-question"></div>
+
+                <div id="resposta-wrapper" class="hidden">
+                    <div class="resposta-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Resposta esperada
+                    </div>
+                    <div id="resposta" class="arena-answer"></div>
+                </div>
+
+                <div class="arena-actions">
+                    <button id="btnRevelar" class="btn-revelar" onclick="revelar()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Revelar Resposta
+                    </button>
+
+                    <div id="feedback" class="feedback-btns hidden">
+                        <button class="btn-acertei" onclick="registrar(1)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Acertei
+                        </button>
+                        <button class="btn-errei" onclick="registrar(0)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Errei
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTADO -->
+            <div id="resultado" class="sim-panel hidden">
+                <div class="result-content">
+                    <div class="result-emoji" id="resultEmoji">🎉</div>
+                    <h3 id="resultTitle">Excelente!</h3>
+                    <p id="resultMsg"></p>
+                    <div class="result-score-display">
+                        <div class="result-score-circle">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+                                <circle cx="60" cy="60" r="52" fill="none" stroke="url(#scoreGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" id="scoreCircle" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+                                <defs>
+                                    <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#ff71ce"/>
+                                        <stop offset="100%" stop-color="#05ffa1"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="result-pct" id="resultPct">0%</div>
+                        </div>
+                    </div>
+                    <div class="result-breakdown">
+                        <div class="rb-item">
+                            <span class="rb-num green" id="rbAcertos">0</span>
+                            <span class="rb-label">Acertos</span>
+                        </div>
+                        <div class="rb-item">
+                            <span class="rb-num red" id="rbErros">0</span>
+                            <span class="rb-label">Erros</span>
+                        </div>
+                    </div>
+
+                    <!-- HISTÓRICO -->
+                    <div class="historico-section" id="historicoSection">
+                        <h4>Histórico de sessões</h4>
+                        <div id="historicoList" class="historico-list"></div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button class="btn-primary" onclick="reiniciar()">Tentar novamente</button>
+                        <button class="btn-secondary" onclick="limparHistorico()">Limpar histórico</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-dot small"></span>
+                Simula<span>Tech</span>
+            </div>
+            <p class="footer-text">Feito com 💜 para a comunidade dev brasileira.</p>
+            <p class="footer-copy">© 2026 SimulaTech · Todos os dados são salvos localmente no seu navegador.</p>
+        </div>
+    </footer>
+
+    <script src="perguntas.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
