@@ -130,7 +130,7 @@ Não é necessário nenhum servidor ou instalação. Basta:
 
 1. Acessar o link a seguir em seu navegador:
 
-[https://jordana-code.github.io/Simula-Tech/#hero](https://jordana-code.github.io/Simula-Tech/#hero)
+[Simula Tech](https://jordana-code.github.io/Simula-Tech/)
 
 ---
 
