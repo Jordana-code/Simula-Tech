@@ -11,7 +11,7 @@
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Como Usar](#-como-usar)
+- [Como Usar](#-como-usar) 
 - [Trilhas e Níveis](#-trilhas-e-níveis)
 - [Banco de Perguntas](#-banco-de-perguntas)
 - [Armazenamento de Dados](#-armazenamento-de-dados)
